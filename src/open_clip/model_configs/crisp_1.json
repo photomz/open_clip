@@ -1,0 +1,18 @@
+{
+  "embed_dim": 512,
+  "text_cfg1": {
+    "context_length": 1024,
+    "hf_model_name": "Synthyra/ESMplusplus_small",
+    "hf_model_pretrained": true,
+    "hf_pooler_type": "mean_pooler",
+    "hf_proj_type": "mlp"
+  },
+  "text_cfg2": {
+    "context_length": 256,
+    "hf_model_name": "Qwen/Qwen2.5-0.5B-Instruct",
+    "hf_model_pretrained": true,
+    "hf_pooler_type": "mean_pooler",
+    "hf_proj_type": "mlp"
+  },
+  "text_text_adapter": true
+}
