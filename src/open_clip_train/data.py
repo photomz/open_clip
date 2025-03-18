@@ -587,7 +587,7 @@ def get_hf_dataset(
     The expected format is a dataset with image and text columns that can be
     directly mapped to CLIP training data.
     """
-    dataset = load_dataset(args.hf_dataset, split="train" if is_train else "test")
+    dataset = load_dataset(args.hf_dataset, split=("train" if is_train else "test"))
     sampler = DistributedSampler(dataset) if args.distributed and is_train else None
     shuffle = is_train and sampler is None
 

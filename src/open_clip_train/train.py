@@ -309,7 +309,7 @@ def evaluate(model, data, epoch, args, tb_writer=None, tokenizer=None):
         with torch.inference_mode():
             for i, batch in enumerate(dataloader):
                 images, texts = batch
-                images = images.to(device=device, dtype=input_dtype, non_blocking=True)
+                images = images.to(device=device, non_blocking=True)
                 texts = texts.to(device=device, non_blocking=True)
 
                 with autocast():
